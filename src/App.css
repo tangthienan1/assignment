@@ -1,7 +1,12 @@
 .App {
   text-align: center;
+  overflow: hidden;
+  overflow-y: none;
+  
 }
-
+::-webkit-scrollbar {
+    display: none;
+  }
 .App-logo {
   height: 40vmin;
   pointer-events: none;
