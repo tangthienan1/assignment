@@ -13,7 +13,6 @@ function App() {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/homepage" component={Homepage} />
-
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>

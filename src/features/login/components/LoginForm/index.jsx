@@ -60,7 +60,6 @@ const LoginForm = () => {
       setUser(result);
     }
     fetchData();
-    console.log("user", user);
   }, []);
   const onSubmit = (data) => {
     if (

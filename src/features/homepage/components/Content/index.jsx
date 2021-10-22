@@ -34,9 +34,6 @@ const Item = styled.div`
 const BrownItem = styled(Item)`
   background: #f4f4f4;
   flex-direction: row-reverse;
-  & div:nth-child(2) {
-    margin-right: -24rem;
-  }
 `;
 const Icon = styled.div`
   position: relative;
@@ -57,7 +54,7 @@ const ItemContent = styled.div`
   & > * {
     margin: 1rem;
   }
-  & p:first-child {
+  & p {
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -66,7 +63,11 @@ const ItemContent = styled.div`
     text-transform: uppercase;
     color: #181949;
   }
-  & p:last-of-type {
+`;
+const ItemContentBottom = styled.div`
+  margin: 0;
+  width: 50%;
+  & p {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -76,10 +77,10 @@ const ItemContent = styled.div`
   }
 `;
 const Button = styled.div`
-  margin: 1rem auto;
-  width: 10%;
+  margin: 2rem auto;
+  width: 20%;
   padding: 8px 16px;
-
+  focus: cursor;
   background: #181949;
   border-radius: 8px;
   color: white;
@@ -95,8 +96,10 @@ const Content = () => {
         </Icon>
         <ItemContent>
           <p>ASSETS</p>
-          <p>Inventory Management</p>
-          <Button>G-Book</Button>
+          <ItemContentBottom>
+            <p>Inventory Management</p>
+            <Button>G-Book</Button>
+          </ItemContentBottom>
         </ItemContent>
       </Item>
       <BrownItem>
@@ -105,8 +108,10 @@ const Content = () => {
         </Icon>
         <ItemContent>
           <p>Accounting</p>
-          <p>Accounting</p>
-          <Button>G-Book</Button>
+          <ItemContentBottom>
+            <p>Accounting</p>
+            <Button>G-Book</Button>
+          </ItemContentBottom>
         </ItemContent>
       </BrownItem>
       <Item>
@@ -114,9 +119,13 @@ const Content = () => {
           <img src={item3} alt="item3" />
         </Icon>
         <ItemContent>
-          <p>HR & Admin</p>
-          <p>Create Homepage Youtube & Instagramt</p>
-          <Button>Fieldmake</Button>
+          <p>HR & Admin </p>
+          <ItemContentBottom>
+            <p>Inventory Management</p>
+            <Button>G-Book</Button>
+            <p>Inventory Management</p>
+            <Button>G-Book</Button>
+          </ItemContentBottom>
         </ItemContent>
       </Item>
       <BrownItem>
@@ -125,28 +134,34 @@ const Content = () => {
         </Icon>
         <ItemContent>
           <p>sales</p>
-          <p>Create Homepage Youtube & Instagramt</p>
-          <Button>Fieldmake</Button>
+          <ItemContentBottom>
+            <p>Create Homepage Youtube & Instagram</p>
+            <Button>Fieldmake</Button>
+          </ItemContentBottom>
         </ItemContent>
       </BrownItem>
       <Item>
         <Icon>
-          <img src={item1} alt="item1" />
+          <img src={item5} alt="item5" />
         </Icon>
         <ItemContent>
-          <p>ASSETS</p>
-          <p>Inventory Management</p>
-          <Button>G-Book</Button>
+          <p>customer</p>
+          <ItemContentBottom>
+            <p>Customer Request Management</p>
+            <Button>OQUFIE</Button>
+          </ItemContentBottom>
         </ItemContent>
       </Item>
       <BrownItem>
         <Icon>
-          <img src={item2} alt="item2" />
+          <img src={item6} alt="item6" />
         </Icon>
         <ItemContent>
-          <p>Accounting</p>
-          <p>Accounting</p>
-          <Button>G-Book</Button>
+          <p>security</p>
+          <ItemContentBottom>
+            <p>SSL server</p>
+            <Button>SECTIGO</Button>
+          </ItemContentBottom>
         </ItemContent>
       </BrownItem>
     </Wrapper>
